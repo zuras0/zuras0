@@ -1,0 +1,20 @@
+name: solo096-build
+on:
+  push:
+    branches: [chatgpt-solo096-build]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Build
+        run: dotnet build solo096-build/Solo096.csproj -c Release
+      - name: Upload DLL
+        uses: actions/upload-artifact@v4
+        with:
+          name: Solo096
+          path: solo096-build/bin/Release/net48/Solo096.dll
