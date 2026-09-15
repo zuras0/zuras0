@@ -2,6 +2,8 @@ name: solo096-build
 on:
   push:
     branches: [chatgpt-solo096-build]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 jobs:
   build:
