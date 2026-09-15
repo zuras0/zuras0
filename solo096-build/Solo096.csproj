@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>Solo096</AssemblyName>
+    <RootNamespace>Solo096</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ExMod.Exiled" Version="9.14.2" />
+  </ItemGroup>
+</Project>
